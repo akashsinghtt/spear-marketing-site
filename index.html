@@ -45,7 +45,7 @@ a:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:2p
 /* hero */
 .hero{position:relative;color:#fff;background:#2b2b2c;overflow:hidden}
 .hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
-.hero picture img{object-fit:cover;object-position:60% center}
+.hero picture img{object-fit:cover;object-position:55% center}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,20,22,.78) 0%,rgba(20,20,22,.62) 100%)}
 .hero .wrap{position:relative;z-index:2;padding-top:4.5rem;padding-bottom:4.5rem}
 .eyebrow{display:inline-block;font-family:var(--head);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;background:var(--red);color:#fff;padding:.35rem .7rem;margin-bottom:1.1rem;transform:skewY(-2deg)}
@@ -71,6 +71,14 @@ section{padding:4rem 0}
 .panel{background:var(--grey);color:#fff;border-radius:6px;padding:1.75rem}
 .panel h3{color:#fff}
 .panel p{margin:0;color:#F2F2F2}
+/* products */
+.product-grid{display:grid;gap:1.5rem;grid-template-columns:1fr;margin-top:2rem}
+.product-card{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.product-card .media{display:block;width:100%;background:#F0F1F3;line-height:0}
+.product-card .media img{display:block;width:100%;height:auto;aspect-ratio:10/7;object-fit:contain;background:#F0F1F3}
+.product-card .body{padding:1.25rem 1.35rem 1.5rem}
+.product-card h3{margin:0 0 .35em;font-size:1.15rem}
+.product-card p{color:var(--muted);margin:0;font-size:1rem}
 /* contact */
 .contact-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.75rem;margin-top:2rem}
 .contact-card dl{margin:0;display:grid;gap:1.25rem}
@@ -86,6 +94,7 @@ address{font-style:normal}
 .site-footer a:hover{color:#FFD2D9}
 @media (min-width:720px){
   .grid{grid-template-columns:repeat(3,1fr)}
+  .product-grid{grid-template-columns:repeat(3,1fr)}
   .split{grid-template-columns:1.3fr 1fr}
   .brand img{width:112px}
   .hero .wrap{padding-top:7rem;padding-bottom:7.5rem}
@@ -107,6 +116,7 @@ address{font-style:normal}
     </a>
     <nav class="nav" aria-label="Main">
       <a href="#about">About</a>
+      <a href="#products">Products</a>
       <a href="#what-we-do">What we do</a>
       <a href="#who-we-serve">Who we serve</a>
       <a href="#contact">Contact</a>
@@ -118,12 +128,12 @@ address{font-style:normal}
   <div class="hero" id="top">
     <picture>
       <source type="image/webp" srcset="assets/hero-warehouse-960.webp 960w, assets/hero-warehouse-1600.webp 1600w" sizes="100vw">
-      <img src="assets/hero-warehouse-960.webp" width="1600" height="893" alt="Warehouse racking stocked with cartons and pallets of household and cleaning products" fetchpriority="high">
+      <img src="assets/hero-warehouse-960.webp" width="1600" height="892" alt="Spear Marketing delivery box truck at the warehouse entrance in Chaguanas" fetchpriority="high">
     </picture>
     <div class="wrap">
       <span class="eyebrow">Trinidad and Tobago</span>
       <h1>Wholesale distribution of everyday consumer goods</h1>
-      <p class="lead">Spear Marketing Limited imports and distributes household, cleaning and consumer products to retailers and supermarkets across Trinidad and Tobago.</p>
+      <p class="lead">Spear Marketing Limited is a Chaguanas family business that imports and distributes household, cleaning and consumer products to retailers and supermarkets across Trinidad and Tobago.</p>
       <a class="btn" href="#contact">Contact us</a>
     </div>
   </div>
@@ -135,7 +145,7 @@ address{font-style:normal}
         <p class="kicker">About us</p>
         <h2 id="about-title">Spear Marketing Limited</h2>
         <p class="lede">Spear Marketing Limited is a wholesale distributor of fast-moving consumer goods (FMCG) based in Chaguanas, Trinidad and Tobago.</p>
-        <p>We import household, cleaning and consumer products and distribute them to retailers and supermarkets throughout Trinidad and Tobago.</p>
+        <p>We import household, cleaning and consumer products and distribute them to retailers and supermarkets throughout Trinidad and Tobago — from our warehouse on John Street to shops across the country.</p>
       </div>
       <div class="panel">
         <h3>Company facts</h3>
@@ -143,13 +153,59 @@ address{font-style:normal}
           <li>Legal name: Spear Marketing Limited</li>
           <li>Incorporated in Trinidad and Tobago in 2007</li>
           <li>Wholesale FMCG import and distribution</li>
-          <li>Based in Montrose, Chaguanas</li>
+          <li>Based in Chaguanas</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="what-we-do" class="section-soft" aria-labelledby="wwd-title">
+  <section id="products" class="section-soft" aria-labelledby="products-title">
+    <div class="wrap">
+      <p class="kicker">Products</p>
+      <h2 id="products-title">Everyday goods for the retail trade</h2>
+      <p class="lede">Disposable tableware and household packs we import and supply — shown here from our own Value Buy and Crown lines.</p>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="media">
+            <picture>
+            <source type="image/webp" srcset="assets/web_cascading-plates_elegant-festive_1600.webp">
+            <img src="assets/web_cascading-plates_elegant-festive_1600.jpg" width="1600" height="1120" alt="Value Buy Elegant gold and Festive white disposable plates in cascading packs" loading="lazy">
+          </picture>
+          </div>
+          <div class="body">
+            <h3>Disposable plates</h3>
+            <p>Elegant and Festive plastic plates in retail packs for parties, catering and everyday use.</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="media">
+            <picture>
+            <source type="image/webp" srcset="assets/web_cascading-bowls-cutlery_1600.webp">
+            <img src="assets/web_cascading-bowls-cutlery_1600.jpg" width="1600" height="1120" alt="Value Buy Festive bowls beside Crown gold plastic cutlery packs" loading="lazy">
+          </picture>
+          </div>
+          <div class="body">
+            <h3>Bowls and cutlery</h3>
+            <p>Festive bowls and Crown gold-coated plastic cutlery for the party and catering aisle.</p>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="media">
+            <picture>
+            <source type="image/webp" srcset="assets/web_cups-bulk-pack-lineup_1600.webp">
+            <img src="assets/web_cups-bulk-pack-lineup_1600.jpg" width="1600" height="1120" alt="Value Buy plastic cups in Elegant, Festive, Neon and Clear packs with a bulk carton" loading="lazy">
+          </picture>
+          </div>
+          <div class="body">
+            <h3>Cups and bulk packs</h3>
+            <p>Retail cup packs and outer cartons — the same lines we move through our Chaguanas warehouse.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="what-we-do" aria-labelledby="wwd-title">
     <div class="wrap">
       <p class="kicker">What we do</p>
       <h2 id="wwd-title">Import and wholesale distribution</h2>
@@ -218,7 +274,7 @@ address{font-style:normal}
         <dl>
           <div>
             <dt>Address</dt>
-            <dd><address>Spear Marketing Limited<br>27 Penco Street, Montrose<br>Chaguanas 500702<br>Trinidad and Tobago</address></dd>
+            <dd><address>Spear Marketing Limited<br>116 John Street<br>Chaguanas<br>Trinidad and Tobago</address></dd>
           </div>
           <div>
             <dt>Email</dt>
@@ -240,7 +296,7 @@ address{font-style:normal}
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>&copy; 2026 Spear Marketing Limited. 27 Penco Street, Montrose, Chaguanas, Trinidad and Tobago. Office: <a href="tel:+18686728085">(868) 672-8085</a></p>
+    <p>&copy; 2026 Spear Marketing Limited. 116 John Street, Chaguanas, Trinidad and Tobago. Office: <a href="tel:+18686728085">(868) 672-8085</a></p>
     <p><a href="https://www.linkedin.com/company/speartt" rel="noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></p>
   </div>
 </footer>
